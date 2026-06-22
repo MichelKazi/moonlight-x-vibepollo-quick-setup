@@ -8,6 +8,9 @@ This guide gets a non-technical person from nothing to playing. Start with Quick
 
 ## Quick Start
 
+> [!WARNING]
+> You can have Claude Code run on this repo and walk you through the setup. See [LLM-SETUP.md](LLM-SETUP.md). Also, always read scripts and make sure you trust what you're downloading and running. You wouldn't want me to start mining crypto on your machine, would you?
+
 ### Words you will see
 
 - **Host**: your gaming PC. The machine the games actually run on.

@@ -2,37 +2,59 @@
 
 Play your gaming PC's games on a Mac, a laptop, a Steam Deck, an iPhone, or an iPad. The PC does the work, the other device just shows the picture and sends your controls. It works at home over your network and away from home over the internet.
 
-This guide gets a non-technical person from nothing to playing. Skim the vocab list, run the install script for each device, then follow the pairing steps.
+This guide gets a non-technical person from nothing to playing. Start with Quick Start. The numbered sections after it explain each piece in more detail if you want it.
 
 ---
 
-## TL;DR vocabulary
+## Quick Start
+
+### Words you will see
 
 - **Host**: your gaming PC. The machine the games actually run on.
 - **Client**: the device you play on. Mac, laptop, Steam Deck, phone, tablet.
-- **Vibepollo**: the server software you install on the host. A tuned fork of Sunshine/Apollo. It captures the game and sends it out.
-- **Moonlight**: the client app you install on every device you play on. It receives the stream.
+- **Vibepollo**: the server software on the host. A tuned fork of Sunshine/Apollo. It captures the game and sends it out.
+- **Moonlight**: the client app on every device you play on. It receives the stream.
 - **VoidLink**: the best Moonlight-style client for iPhone and iPad. Sold on the App Store.
-- **Tailscale**: a free app that makes all your devices act like they are on the same home network, even over the internet. This is how you play away from home with no router setup.
-- **HEVC / H.265**: the video format to prefer. Better picture for the same bandwidth than the older H.264.
+- **Tailscale**: a free app that makes all your devices act like they share one home network, even over the internet. This is how you play away from home with no router setup.
+- **HEVC / H.265**: the video format to prefer. Better picture for the same bandwidth than older H.264.
 - **Bitrate**: how much data the video uses. Higher looks sharper but needs a faster connection.
-- **WOL (Wake-on-LAN)**: a trick that lets a sleeping PC turn itself on when you start streaming.
+- **WOL (Wake-on-LAN)**: wakes a sleeping PC when you start streaming.
 
-## Quick links
+### Downloads
 
-- Vibepollo (host server): https://github.com/Nonary/Vibepollo/releases/latest
-- Moonlight enhanced client (PC, Mac, Linux, Steam Deck): https://github.com/qiin2333/moonlight-qt/releases/latest
+- Vibepollo, host server: https://github.com/Nonary/Vibepollo/releases/latest
+- Moonlight enhanced client for PC, Mac, Linux, Steam Deck: https://github.com/qiin2333/moonlight-qt/releases/latest
 - VoidLink for iPhone and iPad: search "VoidLink - Extreme" on the App Store
 - Tailscale: https://tailscale.com/download
-- Official Moonlight site: https://moonlight-stream.org
 
-## Self setup in five steps
+### Run the one-shot setup
 
-1. On the gaming PC, run the Windows install and tuning scripts. See [scripts/windows](scripts/windows).
-2. Install Tailscale on the PC and every device, sign in to all of them with the same account.
-3. On each device you play on, install Moonlight. Mac and Linux scripts are in [scripts/mac](scripts/mac) and [scripts/linux](scripts/linux). For iPhone or iPad get VoidLink from the App Store.
-4. Open Moonlight, pick your PC, type the PIN it shows into the Vibepollo web page to pair.
-5. Pick your bitrate and codec using the table below, then play.
+The fastest path is two commands. Each one downloads and runs the right scripts for that machine.
+
+On the gaming PC, open PowerShell as administrator and run:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force
+irm https://raw.githubusercontent.com/MichelKazi/moonlight-streaming-guide/main/scripts/windows/setup.ps1 | iex
+```
+
+On a Mac or Linux device you play on, open a terminal and run:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/MichelKazi/moonlight-streaming-guide/main/scripts/setup-client.sh | bash
+```
+
+For iPhone or iPad there is no script. Install VoidLink - Extreme and Tailscale from the App Store.
+
+### Then finish by hand
+
+1. Sign in to Tailscale on the PC and every device using the same account.
+2. On the PC, open `https://localhost:47990`, accept the security warning, set a username and password.
+3. Open Moonlight or VoidLink on your device. Your PC shows up. Select it.
+4. It shows a four digit PIN. Type that PIN into the Vibepollo web page to pair.
+5. Pick a bitrate and codec from the [table below](#bitrate-and-codec), then play.
+
+Prefer to do it step by step instead of the one-shot scripts? The sections below walk through everything.
 
 ---
 

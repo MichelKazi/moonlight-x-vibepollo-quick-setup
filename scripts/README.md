@@ -2,6 +2,15 @@
 
 One-time setup scripts, grouped by the machine they run on.
 
+## One-shot setup
+
+Most people only need these two. Each downloads and runs the rest for that machine.
+
+- `windows/setup.ps1` runs the host install and tuning on the gaming PC.
+- `setup-client.sh` detects Mac or Linux and runs the matching client installer.
+
+See the Quick Start in the main [README](../README.md) for the copy-paste commands.
+
 ## windows (run on the gaming PC, the host)
 
 - `install-host.ps1` installs Vibepollo and Tailscale.

@@ -4,11 +4,11 @@
 # This is the only script you need to run by hand on a device you play on.
 #
 # Easiest way to run it:
-#   curl -fsSL https://raw.githubusercontent.com/MichelKazi/moonlight-streaming-guide/main/scripts/setup-client.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/MichelKazi/moonlight-x-vibepollo-quick-setup/main/scripts/setup-client.sh | bash
 
 set -euo pipefail
 
-base="https://raw.githubusercontent.com/MichelKazi/moonlight-streaming-guide/main/scripts"
+base="https://raw.githubusercontent.com/MichelKazi/moonlight-x-vibepollo-quick-setup/main/scripts"
 
 case "$(uname -s)" in
     Darwin) os="mac" ;;

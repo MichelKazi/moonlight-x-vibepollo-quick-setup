@@ -4,12 +4,12 @@
 #
 # Easiest way to run it, in an admin PowerShell:
 #   Set-ExecutionPolicy Bypass -Scope Process -Force
-#   irm https://raw.githubusercontent.com/MichelKazi/moonlight-streaming-guide/main/scripts/windows/setup.ps1 | iex
+#   irm https://raw.githubusercontent.com/MichelKazi/moonlight-x-vibepollo-quick-setup/main/scripts/windows/setup.ps1 | iex
 
 #Requires -RunAsAdministrator
 
 $ErrorActionPreference = "Stop"
-$base = "https://raw.githubusercontent.com/MichelKazi/moonlight-streaming-guide/main/scripts/windows"
+$base = "https://raw.githubusercontent.com/MichelKazi/moonlight-x-vibepollo-quick-setup/main/scripts/windows"
 
 foreach ($name in "install-host.ps1", "tune-host.ps1") {
     Write-Host "==> Running $name" -ForegroundColor Cyan

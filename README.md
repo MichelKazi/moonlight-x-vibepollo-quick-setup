@@ -35,13 +35,13 @@ On the gaming PC, open PowerShell as administrator and run:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force
-irm https://raw.githubusercontent.com/MichelKazi/moonlight-streaming-guide/main/scripts/windows/setup.ps1 | iex
+irm https://raw.githubusercontent.com/MichelKazi/moonlight-x-vibepollo-quick-setup/main/scripts/windows/setup.ps1 | iex
 ```
 
 On a Mac or Linux device you play on, open a terminal and run:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/MichelKazi/moonlight-streaming-guide/main/scripts/setup-client.sh | bash
+curl -fsSL https://raw.githubusercontent.com/MichelKazi/moonlight-x-vibepollo-quick-setup/main/scripts/setup-client.sh | bash
 ```
 
 For iPhone or iPad there is no script. Install VoidLink - Extreme and Tailscale from the App Store.
